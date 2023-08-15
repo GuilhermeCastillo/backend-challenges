@@ -8,7 +8,7 @@ class RepositorioUrl:
         self.db = db
 
     def criar(self, url: schemas.Url):
-        db_url = models.Url(url=url.url)
+        db_url = models.Url(url=url.url, url_encurtada=url.url_encurtada)
 
         self.db.add(db_url)
         self.db.commit()
